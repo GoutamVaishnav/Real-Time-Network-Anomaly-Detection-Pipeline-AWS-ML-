@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Lambda packaging
+*.zip
+python/
+package/
+build/
+
+# Dataset
+*.txt
+*.csv
+*.parquet
+
+# Secrets
+.env
+*.pem
+*.csv.key
+.aws/

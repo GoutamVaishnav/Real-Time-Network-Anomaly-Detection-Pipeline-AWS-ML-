@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["s3:GetObject", "s3:PutObject", "s3:ListBucket"],
+      "Resource": [
+        "arn:aws:s3:::intrusion-detection-curated-509399621479",
+        "arn:aws:s3:::intrusion-detection-curated-509399621479/*",
+        "arn:aws:s3:::intrusion-detection-models-509399621479",
+        "arn:aws:s3:::intrusion-detection-models-509399621479/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["sns:Publish"],
+      "Resource": "arn:aws:sns:us-east-1:509399621479:security-alerts"
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"],
+      "Resource": "*"
+    }
+  ]
+}
